@@ -30,7 +30,7 @@ void i2c_scan(uint8_t PIN_SDA, uint8_t PIN_SCL){
     gpio_pull_up(PIN_SCL);
 
     while (true) {
-        printf("\nI2C Bus Scan for LCD and BPM280\n");
+        printf("\nI2C Bus Scan for LCD and BPM680\n");
         printf("   0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F\n");
 
         for (int addr = 0; addr < (1 << 7); ++addr) {

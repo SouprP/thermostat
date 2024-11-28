@@ -32,6 +32,7 @@ add_library(program_libs
     # src/menu.cpp
     # src/pump_driver.cpp
     src/bmp280.cpp
+    src/peltier_driver.cpp
 )
 
 target_link_libraries(program_libs

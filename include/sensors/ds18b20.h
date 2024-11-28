@@ -15,9 +15,9 @@ private:
     uint8_t read_byte();            // Read a byte
 
 public:
-    DS18B20(uint pin);  // Constructor
-    bool initialize();  // Initialize and check DS18B20 presence
-    float read_temperature();  // Read temperature in Celsius
+    DS18B20(uint pin); 
+    bool init(); 
+    float read_temperature(); 
 };
 
 #endif

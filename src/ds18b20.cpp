@@ -61,7 +61,7 @@ uint8_t DS18B20::read_byte() {
     return byte;
 }
 
-bool DS18B20::initialize() {
+bool DS18B20::init() {
     return reset();
 }
 
