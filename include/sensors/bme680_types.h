@@ -25,32 +25,6 @@ typedef struct {                                              // invalid value
 } bme680_values_float_t;
 
 /**
- * @brief 	Oversampling rates
- */
-typedef enum {
-    osr_none = 0,     // measurement is skipped, output values are invalid
-    osr_1x   = 1,     // default oversampling rates
-    osr_2x   = 2,
-    osr_4x   = 3,
-    osr_8x   = 4,
-    osr_16x  = 5
-} bme680_oversampling_rate_t;
-
-/**
- * @brief 	Filter sizes
- */
-typedef enum {
-    iir_size_0   = 0,   // filter is not used
-    iir_size_1   = 1,
-    iir_size_3   = 2,
-    iir_size_7   = 3,
-    iir_size_15  = 4,
-    iir_size_31  = 5,
-    iir_size_63  = 6,
-    iir_size_127 = 7
-} bme680_filter_size_t;
-
-/**
  * @brief   Sensor parameters that configure the TPHG measurement cycle
  *
  *  T - temperature measurement
@@ -59,7 +33,6 @@ typedef enum {
  *  G - gas measurement
  */
 typedef struct {
-
     uint8_t  osr_temperature;        // T oversampling rate (default osr_1x)
     uint8_t  osr_pressure;           // P oversampling rate (default osr_1x)
     uint8_t  osr_humidity;           // H oversampling rate (default osr_1x)
@@ -114,5 +87,31 @@ typedef struct {
     int8_t   range_sw_err;
 
 } bme680_calib_data_t;
+
+/**
+ * @brief 	Oversampling rates
+ */
+typedef enum {
+    osr_none = 0,     // measurement is skipped, output values are invalid
+    osr_1x   = 1,     // default oversampling rates
+    osr_2x   = 2,
+    osr_4x   = 3,
+    osr_8x   = 4,
+    osr_16x  = 5
+} bme680_oversampling_rate_t;
+
+/**
+ * @brief 	Filter sizes
+ */
+typedef enum {
+    iir_size_0   = 0,   // filter is not used
+    iir_size_1   = 1,
+    iir_size_3   = 2,
+    iir_size_7   = 3,
+    iir_size_15  = 4,
+    iir_size_31  = 5,
+    iir_size_63  = 6,
+    iir_size_127 = 7
+} bme680_filter_size_t;
 
 #endif
